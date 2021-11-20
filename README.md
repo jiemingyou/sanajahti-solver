@@ -1,5 +1,5 @@
 # sanajahti-solver
-Solving sanajahti with depth-first search. List of words taken from Kotus. For educational purposes only. :)
+Solving sanajahti. List of words taken from Kotus. For educational purposes only :)
 
 
 

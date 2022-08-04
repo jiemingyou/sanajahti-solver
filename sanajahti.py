@@ -1,4 +1,5 @@
 from collections import deque
+import time
 
 
 class Game:
@@ -14,6 +15,7 @@ class Game:
     _tiles = []
 
     def makeboard(self):
+        self._tiles.clear()
         for i in range(0, 16, 4):
             self._tiles.append(
                 self.tiles[i:i+4]
@@ -44,6 +46,7 @@ class Game:
         def dfs(x: int, y: int, curr: str, wordsleft: set):
             if (x,y) in visited:
                 return
+                
             visited.append((x,y))
 
             remaining = {i for i in wordsleft if i.startswith(curr)}
@@ -68,3 +71,16 @@ class Game:
                 dfs(x, y, self._tiles[x][y], self.words)
 
         return sorted(list(set(ans)), key=len, reverse=True)
+
+
+
+def sanajahtisolve(letters):
+    words = set()
+    with open("resources/kotus_wordlist.txt", encoding='utf-8') as f:
+        for word in f:
+            word = word.strip()
+            words.add(word)
+    
+    solution = Game(letters, words).solve()
+
+    return solution

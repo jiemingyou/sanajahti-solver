@@ -1,6 +1,7 @@
 # sanajahti-solver
 Solving sanajahti. List of words taken from Kotus. For educational purposes only :)
 
+Link: https://1gd7kf.deta.dev
 
 
 ## TODO:

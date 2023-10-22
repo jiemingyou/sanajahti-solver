@@ -3,7 +3,6 @@ from sanajahti import Game
 
 # current running time: around 1 second
 if __name__ == "__main__":
-
     words = set()
     with open("kotus_wordlist.txt") as f:
         for word in f:
@@ -15,5 +14,5 @@ if __name__ == "__main__":
     game = Game(letters, words)
     lst = game.solve()
 
-for word in lst:
-    print(word)
+    for word in lst:
+        print(word)
